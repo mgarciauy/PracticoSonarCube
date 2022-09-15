@@ -44,5 +44,5 @@ jobs:
         run: |
           dir
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mgarciauy_PracticoSonarCube" /o:"mgarciauy" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build
+          dotnet build src/src.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
